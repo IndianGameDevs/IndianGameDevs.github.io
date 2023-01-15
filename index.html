@@ -5,7 +5,13 @@
     <head>
     </head>
     <style>
-        h1{text-align: center;}
+        h1{
+            text-align: center;
+        background-image: url("../IndianGameDevs.github.io/Images/Header.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        }
 
         #b1{
             background-color: orange;
@@ -26,8 +32,55 @@
             font-size: 20px;
             color: grey;
         }
+.radial-menu {
+  position:relative;
+  align-self: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.arc {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  transform-origin: 100% 100%;
+  text-align: center;
+  border-radius: 1px;
+  background-color: white;
+  transition: background-color 0.2s ease;
+}
+
+.arc:nth-child(1) {
+  transform: rotate(0deg) skewY(180deg);
+  background: grey;
+  background-image: url("../IndianGameDevs.github.io/Images/Attack.png");
+  background-repeat: no-repeat;
+  background-size: 1px;
+    background-size: contain;
+}
+
+.arc:nth-child(2) {
+  transform: rotate(90deg) skewY(180deg);
+  background: grey;
+}
+
+.arc:nth-child(3) {
+  transform: rotate(180deg) skewY(180deg);
+  background: grey;
+}
+
+.arc:nth-child(4) {
+  transform: rotate(270deg) skewY(180deg);
+  background: grey;
+}
+
+.arc:hover {
+  background-color: #ccc;
+}
     </style>
-    <body bgcolor="black">
+    <body bgcolor="black" background="../IndianGameDevs.github.io/Images/Attack.png">
     <font color="orange">
         <h1>  Indian Game Devs</h1>
     </font>
@@ -37,5 +90,12 @@
     <button id="b1" onclick="loadGames"> Load Games</button>
 </center>
 </div>
+<div class="radial-menu">
+    <div class="arc"></div>
+    <div class="arc"></div>
+    <div class="arc"></div>
+    <div class="arc"></div>
+  </div>
+  
     </body>
     </html>
